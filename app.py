@@ -91,8 +91,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }
 
         table[class=mobile-view], td[class=mobile-view], img[class=mobile-view] {
-            width:320px !important;	
-            height:auto !important;    
+            width:320px !important;
+            height:auto !important;
         }
 
         td[class=clump] {
@@ -103,7 +103,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }
 
         td[class=aligncenter] {
-            width:300px !important;	
+            width:300px !important;
             height:auto !important;
             text-align:center !important;
         }
@@ -143,7 +143,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                                     </table>
                                 </td>
                             </tr>
-                            
+
                             <tr>
                                 <td colspan="4" style="padding:0 0 15px 10px;">
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
@@ -195,7 +195,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                                                         <tbody>
                                                             <tr>
                                                                 <td width="35" height="25" valign="top"><img src="https://cdn.shopify.com/s/files/1/0065/7306/4236/files/email-internet-icon.png" alt="Web" border="0" width="22" style="display:block; border:0; outline:none;" /></td>
-                                                                <td width="" height="30" valign="top" align="left" style="font-family:'Poppins', sans-serif, Arial; font-size:12px; line-height:24px; font-weight:400; color:#2f3542;"><a href="http://www.flomattress.com" style="text-decoration:none; color:#2f3542;">flomattress.com</a></td>
+                                                                <td width="" height="30" valign="top" align="left" style="font-family:'Poppins', sans-serif, Arial; font-size:12px; line-height:24px; font-weight:400; color:#2f3542;"><a href="https://www.flomattress.com" style="text-decoration:none; color:#2f3542;">flomattress.com</a></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
