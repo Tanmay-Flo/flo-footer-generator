@@ -290,10 +290,11 @@ if st.button("Generate and open my email footer HTML file"):
             st.error(err)
     else:
         full_name = f"{fn} {ln}"
+        formatted_phone = f"{ph[:5]} {ph[5:]}"
 
         html_output = HTML_TEMPLATE
         html_output = html_output.replace("Tanmay Badgujar", full_name)
-        html_output = html_output.replace("9757486757", ph)
+        html_output = html_output.replace("9757486757", formatted_phone)
         html_output = html_output.replace("data.analyst@flomattress.com", em)
         html_output = html_output.replace("Executive Data Analyst", jt)
 
