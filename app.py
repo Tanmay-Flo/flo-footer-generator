@@ -588,7 +588,7 @@ def build_flo_footer_html(details):
         "{{FULL_NAME}}": html.escape(full_name),
         "{{JOB_TITLE}}": html.escape(details["job_title"]),
         "{{EMAIL}}": html.escape(details["email"]),
-        "{{PHONE_FORMATTED}}": f"{phone[:5]} {phone[5:]}",
+        "{{PHONE_FORMATTED}}": f"{phone[:3]} {phone[3:6]} {phone[6:]}",
     }
     return replace_tokens(FLO_HTML_TEMPLATE, replacements)
 
@@ -603,7 +603,7 @@ def build_hush_footer_html(details):
         "{{JOB_TITLE}}": html.escape(details["job_title"]),
         "{{EMAIL}}": html.escape(details["email"]),
         "{{PHONE_RAW}}": phone,
-        "{{PHONE_FORMATTED}}": f"{phone[:5]} {phone[5:]}",
+        "{{PHONE_FORMATTED}}": f"{phone[:3]} {phone[3:6]} {phone[6:]}",
         "{{HUSH_LOGO_URI}}": HUSH_LOGO_DATA_URI,
         "{{PHONE_ICON_URI}}": PHONE_ICON_DATA_URI,
         "{{EMAIL_ICON_URI}}": EMAIL_ICON_DATA_URI,
