@@ -172,7 +172,7 @@ FLO_HTML_TEMPLATE = """<!DOCTYPE html>
                                                         <tbody>
                                                             <tr>
                                                                 <td width="35" height="25" valign="top"><img src="https://cdn.shopify.com/s/files/1/0065/7306/4236/files/email-phone-icon.png" alt="Phone" border="0" width="22" style="display:block; border:0; outline:none;" /></td>
-                                                                <td width="" height="25" valign="top" align="left" style="font-family:'Poppins', sans-serif, Arial; font-size:12px; line-height:24px; font-weight:400; color:#2f3542;"> +91 {{PHONE_FORMATTED}}</td>
+                                                                <td width="" height="25" valign="top" align="left" style="font-family:'Poppins', sans-serif, Arial; font-size:12px; line-height:24px; font-weight:400; color:#2f3542;"><span class="mobile_link"><a href="tel:+91{{PHONE_RAW}}" style="text-decoration:none; color:#2f3542; pointer-events:auto; cursor:pointer;">+91 {{PHONE_FORMATTED}}</a></span></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -407,7 +407,7 @@ HUSH_HTML_TEMPLATE = """<!DOCTYPE html>
                                                         <tbody>
                                                             <tr>
                                                                 <td width="35" height="25" valign="top"><img src="{{PHONE_ICON_URI}}" alt="Phone" border="0" width="22" style="display:block; border:0; outline:none;" /></td>
-                                                                <td width="" height="25" valign="top" align="left" style="font-family:'Poppins', sans-serif, Arial; font-size:12px; line-height:24px; font-weight:400; color:#2f3542;"> <a href="tel:+91{{PHONE_RAW}}" style="text-decoration:none; color:#2f3542;">+91 {{PHONE_FORMATTED}}</a></td>
+                                                                <td width="" height="25" valign="top" align="left" style="font-family:'Poppins', sans-serif, Arial; font-size:12px; line-height:24px; font-weight:400; color:#2f3542;"><span class="mobile_link"><a href="tel:+91{{PHONE_RAW}}" style="text-decoration:none; color:#2f3542; pointer-events:auto; cursor:pointer;">+91 {{PHONE_FORMATTED}}</a></span></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -588,6 +588,7 @@ def build_flo_footer_html(details):
         "{{FULL_NAME}}": html.escape(full_name),
         "{{JOB_TITLE}}": html.escape(details["job_title"]),
         "{{EMAIL}}": html.escape(details["email"]),
+        "{{PHONE_RAW}}": phone,
         "{{PHONE_FORMATTED}}": f"{phone[:3]} {phone[3:6]} {phone[6:]}",
     }
     return replace_tokens(FLO_HTML_TEMPLATE, replacements)
